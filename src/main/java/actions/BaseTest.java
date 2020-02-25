@@ -12,15 +12,22 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import com.aventstack.extentreports.ExtentReports;
+
 import bsh.Capabilities;
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.ScenarioCacheManager;
 
 public class BaseTest {
 
 	private static WebDriver driver;
+	private static ThreadLocal<WebDriver> driverThreads = new ThreadLocal<>();
+	private static  ThreadLocal<ScenarioCacheManager> cacheManagerThreads= new ThreadLocal<>();
 
-	public static WebDriver getInstance() {
+	public static void setUpDriver() {
+		
+		if(driverThreads.get() == null) {
 			String dirPath = System.getProperty("user.dir") + "//src//test//resources//executables//chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", dirPath);
 			
@@ -35,14 +42,47 @@ public class BaseTest {
 			options.setCapability(CapabilityType.PLATFORM,Platform.ANY);
 			
 			driver = new ChromeDriver(options.merge(cap));
-
-		return driver;
+			driverThreads.set(driver);
+			
+		}
 
 	}
 	
 	private BaseTest() {
 		
 	}
+	
+	public static void setDriver(WebDriver driver) {
+		driverThreads.set(driver);
+	}
+	
+	public static WebDriver getDriver() {
+		
+		if(null == driverThreads.get()) {
+			setUpDriver();
+		}
+		return driverThreads.get();
+	}
+	
+	public static void setScenarioCache(ScenarioCacheManager scenarioCache) {
+		cacheManagerThreads.set(scenarioCache);
+	}
+	
+	public static ScenarioCacheManager getScenarioCache() {
+		
+		if(null ==  cacheManagerThreads.get()) {
+			setScenarioCache(ScenarioCacheManager.getInstance());
+		}
+		return cacheManagerThreads.get();
+	}
+	
 
+	public static void destroyDriver() {
+		if( driverThreads.get() !=null) {
+			 driverThreads.get().close();
+			 driverThreads.get().quit();
+		}
+		driverThreads.set(null);
+	}
 		
 }

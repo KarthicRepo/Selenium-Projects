@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/HomePageValidator.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/SimpleInputForm.feature");
 formatter.feature({
   "comments": [
     {
@@ -7,9 +7,9 @@ formatter.feature({
     }
   ],
   "line": 3,
-  "name": "Homepage validation feature",
-  "description": "As a test user of this website \nI would like to verify that homepage contains all the WebElements\nSo that I can use every functionality provided for learning test automation.",
-  "id": "homepage-validation-feature",
+  "name": "SimpleInputForm validation feature",
+  "description": "As a test user of this website \nI would like to verify that I am able to type text and numbers into Input forms\nSo that I the website takes the input and process it",
+  "id": "simpleinputform-validation-feature",
   "keyword": "Feature",
   "tags": [
     {
@@ -18,7 +18,7 @@ formatter.feature({
     },
     {
       "line": 2,
-      "name": "@All"
+      "name": "@SimpleForm"
     },
     {
       "line": 2,
@@ -26,298 +26,163 @@ formatter.feature({
     }
   ]
 });
-formatter.before({
-  "duration": 81623023150,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 9,
-  "name": "Verify that Menu list is available on home page",
-  "description": "",
-  "id": "homepage-validation-feature;verify-that-menu-list-is-available-on-home-page",
-  "type": "scenario",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "line": 8,
-      "name": "@1"
-    },
-    {
-      "line": 8,
-      "name": "@validation"
-    },
-    {
-      "line": 8,
-      "name": "@Sanity"
-    },
-    {
-      "line": 8,
-      "name": "@Smoke"
-    }
-  ]
-});
-formatter.step({
-  "line": 10,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 11,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 12,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 13,
-  "name": "I should see below menu list under \"All Examples\" root",
-  "rows": [
-    {
-      "cells": [
-        "Input Forms"
-      ],
-      "line": 14
-    },
-    {
-      "cells": [
-        "Date Pickers"
-      ],
-      "line": 15
-    },
-    {
-      "cells": [
-        "Table"
-      ],
-      "line": 16
-    },
-    {
-      "cells": [
-        "Progress Bars \u0026 Sliders"
-      ],
-      "line": 17
-    },
-    {
-      "cells": [
-        "Alerts \u0026 Modals"
-      ],
-      "line": 18
-    },
-    {
-      "cells": [
-        "List Box"
-      ],
-      "line": 19
-    },
-    {
-      "cells": [
-        "Others"
-      ],
-      "line": 20
-    }
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "I should see the text \"WELCOME TO SELENIUM EASY DEMO\"",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
-});
-formatter.result({
-  "duration": 204762380,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Selenium Easy",
-      "offset": 19
-    }
-  ],
-  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
-});
-formatter.result({
-  "duration": 141936622,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Menu List",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
-});
-formatter.result({
-  "duration": 528283663,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "All Examples",
-      "offset": 36
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_below_menu_list_under_root(String,DataTable)"
-});
-formatter.result({
-  "duration": 254632489,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "WELCOME TO SELENIUM EASY DEMO",
-      "offset": 23
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_the_text(String)"
-});
-formatter.result({
-  "duration": 34206094,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 12071763949,
-  "status": "passed"
-});
 formatter.scenarioOutline({
-  "line": 24,
-  "name": "Verify all the child elements of Menu list",
+  "line": 28,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
   "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 23,
+      "line": 27,
       "name": "@2"
     },
     {
-      "line": 23,
+      "line": 27,
       "name": "@Integration"
+    },
+    {
+      "line": 27,
+      "name": "@Karthic"
     }
   ]
 });
 formatter.step({
-  "line": 25,
+  "line": 29,
   "name": "I am on the home page of this website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 26,
+  "line": 30,
   "name": "I wait till I see \"Selenium Easy\" logo text on home page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
+  "line": 31,
   "name": "I scrolldown until I see \"Menu List\" table",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \u003cMenuItem\u003e node",
+  "line": 32,
+  "name": "I click on the menu item \"Input Forms\" node",
   "keyword": "And "
 });
 formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \u003cchildElements\u003e under that",
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "I scroll till I see the second input menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "I enter the first number \u003cfirstNumber\u003e in the first box",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "I enter the second number \u003csecondNumber\u003e in the seond box",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "I click on the Get total button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "I should get the total result as \u003ctotal\u003e",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 31,
+  "line": 40,
   "name": "",
   "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;",
   "rows": [
     {
       "cells": [
-        "MenuItem",
-        "childElements"
+        "firstNumber",
+        "secondNumber",
+        "total"
       ],
-      "line": 32,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;1"
+      "line": 41,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;1"
     },
     {
       "cells": [
-        "\"Input Forms\"",
-        "\"Simple Form Demo,Checkbox Demo,Radio Buttons Demo,Select Dropdown List,Input Form Submit,Ajax Form Submit,JQuery Select dropdown\""
+        "1",
+        "2",
+        "3"
       ],
-      "line": 33,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;2"
+      "line": 42,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;2"
     },
     {
       "cells": [
-        "\"Date Pickers\"",
-        "\"Bootstrap Date Picker,JQuery Date Picker\""
+        "5",
+        "5",
+        "100"
       ],
-      "line": 34,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;3"
+      "line": 43,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;3"
     },
     {
       "cells": [
-        "\"Table\"",
-        "\"Table Pagination,Table Data Search,Table Filter,Table Sort \u0026 Search,Table Data Download\""
+        "25",
+        "25",
+        "50"
       ],
-      "line": 35,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;4"
+      "line": 44,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;4"
     },
     {
       "cells": [
-        "\"Progress Bars \u0026 Sliders\"",
-        "\"JQuery Download Progress bars,Bootstrap Progress bar,Drag \u0026 Drop Sliders\""
+        "100",
+        "100",
+        "2000"
       ],
-      "line": 36,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;5"
+      "line": 45,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;5"
     },
     {
       "cells": [
-        "\"Alerts \u0026 Modals\"",
-        "\"Bootstrap Alerts,Bootstrap Modals,Window Popup Modal,Progress Bar Modal,Javascript Alerts,File Download\""
+        "500",
+        "1500",
+        "2000"
       ],
-      "line": 37,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;6"
-    },
-    {
-      "cells": [
-        "\"List Box\"",
-        "\"Bootstrap List Box,JQuery List Box,Data List Filter\""
-      ],
-      "line": 38,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;7"
-    },
-    {
-      "cells": [
-        "\"Others\"",
-        "\"Drag and Drop,Dynamic Data Loading,Charts Demo\""
-      ],
-      "line": 39,
-      "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;8"
+      "line": 46,
+      "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;6"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 47363623625,
+  "duration": 8684365755,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 209726264,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 33,
-  "name": "Verify all the child elements of Menu list",
+  "line": 42,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
   "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;2",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 23,
+      "line": 2,
+      "name": "@SimpleForm"
+    },
+    {
+      "line": 27,
       "name": "@2"
     },
     {
@@ -329,43 +194,71 @@ formatter.scenario({
       "name": "@Regression"
     },
     {
-      "line": 23,
+      "line": 27,
       "name": "@Integration"
     },
     {
-      "line": 2,
-      "name": "@All"
+      "line": 27,
+      "name": "@Karthic"
     }
   ]
 });
 formatter.step({
-  "line": 25,
+  "line": 29,
   "name": "I am on the home page of this website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 26,
+  "line": 30,
   "name": "I wait till I see \"Selenium Easy\" logo text on home page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
+  "line": 31,
   "name": "I scrolldown until I see \"Menu List\" table",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
+  "line": 32,
   "name": "I click on the menu item \"Input Forms\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "I scroll till I see the second input menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "I enter the first number 1 in the first box",
   "matchedColumns": [
     0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "I enter the second number 2 in the seond box",
+  "matchedColumns": [
+    1
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Simple Form Demo,Checkbox Demo,Radio Buttons Demo,Select Dropdown List,Input Form Submit,Ajax Form Submit,JQuery Select dropdown\" under that",
+  "line": 37,
+  "name": "I click on the Get total button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "I should get the total result as 3",
   "matchedColumns": [
-    1
+    2
   ],
   "keyword": "Then "
 });
@@ -373,7 +266,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
 });
 formatter.result({
-  "duration": 6287036,
+  "duration": 301207080,
   "status": "passed"
 });
 formatter.match({
@@ -386,7 +279,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
 });
 formatter.result({
-  "duration": 42029132,
+  "duration": 140539288,
   "status": "passed"
 });
 formatter.match({
@@ -399,7 +292,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
 });
 formatter.result({
-  "duration": 533414821,
+  "duration": 536112036,
   "status": "passed"
 });
 formatter.match({
@@ -412,600 +305,181 @@ formatter.match({
   "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
 });
 formatter.result({
-  "duration": 85981174,
+  "duration": 87886146,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Simple Form Demo,Checkbox Demo,Radio Buttons Demo,Select Dropdown List,Input Form Submit,Ajax Form Submit,JQuery Select dropdown",
+      "val": "Simple Form Demo",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 501825457,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_scroll_till_I_see_the_second_input_menu()"
+});
+formatter.result({
+  "duration": 544286589,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 25
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_first_number_in_the_first_box(int)"
+});
+formatter.result({
+  "duration": 1192715824,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 26
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_second_number_in_the_seond_box(int)"
+});
+formatter.result({
+  "duration": 1150666812,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_click_on_the_Get_total_button()"
+});
+formatter.result({
+  "duration": 71735827,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
       "offset": 33
     }
   ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
+  "location": "SimpleInputFormStepDefn.i_should_get_the_total_result_as(int)"
 });
 formatter.result({
-  "duration": 1249325332,
+  "duration": 33247063,
   "status": "passed"
 });
 formatter.after({
-  "duration": 834315476,
+  "duration": 966545907,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 31030,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14634993585,
+  "duration": 7501877335,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 215487239,
   "status": "passed"
 });
 formatter.scenario({
+  "line": 43,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
+  "description": "",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@SimpleForm"
+    },
+    {
+      "line": 27,
+      "name": "@2"
+    },
+    {
+      "line": 2,
+      "name": "@UI"
+    },
+    {
+      "line": 2,
+      "name": "@Regression"
+    },
+    {
+      "line": 27,
+      "name": "@Integration"
+    },
+    {
+      "line": 27,
+      "name": "@Karthic"
+    }
+  ]
+});
+formatter.step({
+  "line": 29,
+  "name": "I am on the home page of this website",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "I scrolldown until I see \"Menu List\" table",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "I click on the menu item \"Input Forms\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
   "line": 34,
-  "name": "Verify all the child elements of Menu list",
-  "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@2"
-    },
-    {
-      "line": 2,
-      "name": "@UI"
-    },
-    {
-      "line": 2,
-      "name": "@Regression"
-    },
-    {
-      "line": 23,
-      "name": "@Integration"
-    },
-    {
-      "line": 2,
-      "name": "@All"
-    }
-  ]
-});
-formatter.step({
-  "line": 25,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
+  "name": "I scroll till I see the second input menu",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"Date Pickers\" node",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Bootstrap Date Picker,JQuery Date Picker\" under that",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
-});
-formatter.result({
-  "duration": 7898189,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Selenium Easy",
-      "offset": 19
-    }
-  ],
-  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
-});
-formatter.result({
-  "duration": 37934098,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Menu List",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
-});
-formatter.result({
-  "duration": 532497971,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Date Pickers",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
-});
-formatter.result({
-  "duration": 62936789,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Bootstrap Date Picker,JQuery Date Picker",
-      "offset": 33
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
-});
-formatter.result({
-  "duration": 1086736084,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 909076276,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 7670506832,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 35,
-  "name": "Verify all the child elements of Menu list",
-  "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@2"
-    },
-    {
-      "line": 2,
-      "name": "@UI"
-    },
-    {
-      "line": 2,
-      "name": "@Regression"
-    },
-    {
-      "line": 23,
-      "name": "@Integration"
-    },
-    {
-      "line": 2,
-      "name": "@All"
-    }
-  ]
-});
-formatter.step({
-  "line": 25,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"Table\" node",
+  "name": "I enter the first number 5 in the first box",
   "matchedColumns": [
     0
   ],
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Table Pagination,Table Data Search,Table Filter,Table Sort \u0026 Search,Table Data Download\" under that",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
-});
-formatter.result({
-  "duration": 6886310,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Selenium Easy",
-      "offset": 19
-    }
-  ],
-  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
-});
-formatter.result({
-  "duration": 49105018,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Menu List",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
-});
-formatter.result({
-  "duration": 529992756,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Table",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
-});
-formatter.result({
-  "duration": 69562249,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Table Pagination,Table Data Search,Table Filter,Table Sort \u0026 Search,Table Data Download",
-      "offset": 33
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
-});
-formatter.result({
-  "duration": 1211118751,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 876476001,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 7295778711,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 36,
-  "name": "Verify all the child elements of Menu list",
-  "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;5",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@2"
-    },
-    {
-      "line": 2,
-      "name": "@UI"
-    },
-    {
-      "line": 2,
-      "name": "@Regression"
-    },
-    {
-      "line": 23,
-      "name": "@Integration"
-    },
-    {
-      "line": 2,
-      "name": "@All"
-    }
-  ]
-});
-formatter.step({
-  "line": 25,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"Progress Bars \u0026 Sliders\" node",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"JQuery Download Progress bars,Bootstrap Progress bar,Drag \u0026 Drop Sliders\" under that",
+  "name": "I enter the second number 5 in the seond box",
   "matchedColumns": [
     1
   ],
-  "keyword": "Then "
+  "keyword": "And "
 });
-formatter.match({
-  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
-});
-formatter.result({
-  "duration": 9696009,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Selenium Easy",
-      "offset": 19
-    }
-  ],
-  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
-});
-formatter.result({
-  "duration": 66908671,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Menu List",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
-});
-formatter.result({
-  "duration": 532489729,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Progress Bars \u0026 Sliders",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
-});
-formatter.result({
-  "duration": 74904800,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "JQuery Download Progress bars,Bootstrap Progress bar,Drag \u0026 Drop Sliders",
-      "offset": 33
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
-});
-formatter.result({
-  "duration": 1147155537,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 788613128,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 9469378394,
-  "status": "passed"
-});
-formatter.scenario({
+formatter.step({
   "line": 37,
-  "name": "Verify all the child elements of Menu list",
-  "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;6",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@2"
-    },
-    {
-      "line": 2,
-      "name": "@UI"
-    },
-    {
-      "line": 2,
-      "name": "@Regression"
-    },
-    {
-      "line": 23,
-      "name": "@Integration"
-    },
-    {
-      "line": 2,
-      "name": "@All"
-    }
-  ]
-});
-formatter.step({
-  "line": 25,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
+  "name": "I click on the Get total button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"Alerts \u0026 Modals\" node",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Bootstrap Alerts,Bootstrap Modals,Window Popup Modal,Progress Bar Modal,Javascript Alerts,File Download\" under that",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
-});
-formatter.result({
-  "duration": 11109829,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Selenium Easy",
-      "offset": 19
-    }
-  ],
-  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
-});
-formatter.result({
-  "duration": 65698003,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Menu List",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
-});
-formatter.result({
-  "duration": 537362945,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Alerts \u0026 Modals",
-      "offset": 26
-    }
-  ],
-  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
-});
-formatter.result({
-  "duration": 90366633,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Bootstrap Alerts,Bootstrap Modals,Window Popup Modal,Progress Bar Modal,Javascript Alerts,File Download",
-      "offset": 33
-    }
-  ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
-});
-formatter.result({
-  "duration": 1448979344,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 905417120,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 7919096649,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 38,
-  "name": "Verify all the child elements of Menu list",
-  "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;7",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 23,
-      "name": "@2"
-    },
-    {
-      "line": 2,
-      "name": "@UI"
-    },
-    {
-      "line": 2,
-      "name": "@Regression"
-    },
-    {
-      "line": 23,
-      "name": "@Integration"
-    },
-    {
-      "line": 2,
-      "name": "@All"
-    }
-  ]
-});
-formatter.step({
-  "line": 25,
-  "name": "I am on the home page of this website",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 26,
-  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "I scrolldown until I see \"Menu List\" table",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"List Box\" node",
+  "name": "I should get the total result as 100",
   "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Bootstrap List Box,JQuery List Box,Data List Filter\" under that",
-  "matchedColumns": [
-    1
+    2
   ],
   "keyword": "Then "
 });
@@ -1013,7 +487,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
 });
 formatter.result({
-  "duration": 9797342,
+  "duration": 29491422,
   "status": "passed"
 });
 formatter.match({
@@ -1026,7 +500,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
 });
 formatter.result({
-  "duration": 43988407,
+  "duration": 70739463,
   "status": "passed"
 });
 formatter.match({
@@ -1039,53 +513,121 @@ formatter.match({
   "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
 });
 formatter.result({
-  "duration": 529630574,
+  "duration": 532900880,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "List Box",
+      "val": "Input Forms",
       "offset": 26
     }
   ],
   "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
 });
 formatter.result({
-  "duration": 75426982,
+  "duration": 90817542,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Bootstrap List Box,JQuery List Box,Data List Filter",
+      "val": "Simple Form Demo",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 549182108,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_scroll_till_I_see_the_second_input_menu()"
+});
+formatter.result({
+  "duration": 533899669,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 25
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_first_number_in_the_first_box(int)"
+});
+formatter.result({
+  "duration": 1147849841,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5",
+      "offset": 26
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_second_number_in_the_seond_box(int)"
+});
+formatter.result({
+  "duration": 1124967393,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_click_on_the_Get_total_button()"
+});
+formatter.result({
+  "duration": 61069635,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "100",
       "offset": 33
     }
   ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
+  "location": "SimpleInputFormStepDefn.i_should_get_the_total_result_as(int)"
 });
 formatter.result({
-  "duration": 1131732007,
+  "duration": 31793485,
+  "error_message": "java.lang.AssertionError: expected [100] but found [10]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:135)\r\n\tat org.testng.Assert.assertEquals(Assert.java:116)\r\n\tat org.testng.Assert.assertEquals(Assert.java:190)\r\n\tat org.testng.Assert.assertEquals(Assert.java:200)\r\n\tat stepdefs.SimpleInputFormStepDefn.i_should_get_the_total_result_as(SimpleInputFormStepDefn.java:75)\r\n\tat ✽.Then I should get the total result as 100(features/SimpleInputForm.feature:38)\r\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded0.png");
+formatter.after({
+  "duration": 2402306329,
   "status": "passed"
 });
+formatter.embedding("image/png", "embedded1.png");
 formatter.after({
-  "duration": 873023392,
+  "duration": 5573170496,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14921227075,
+  "duration": 8539993736,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 238437080,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 39,
-  "name": "Verify all the child elements of Menu list",
+  "line": 44,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
   "description": "",
-  "id": "homepage-validation-feature;verify-all-the-child-elements-of-menu-list;;8",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;4",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 23,
+      "line": 2,
+      "name": "@SimpleForm"
+    },
+    {
+      "line": 27,
       "name": "@2"
     },
     {
@@ -1097,43 +639,71 @@ formatter.scenario({
       "name": "@Regression"
     },
     {
-      "line": 23,
+      "line": 27,
       "name": "@Integration"
     },
     {
-      "line": 2,
-      "name": "@All"
+      "line": 27,
+      "name": "@Karthic"
     }
   ]
 });
 formatter.step({
-  "line": 25,
+  "line": 29,
   "name": "I am on the home page of this website",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 26,
+  "line": 30,
   "name": "I wait till I see \"Selenium Easy\" logo text on home page",
   "keyword": "And "
 });
 formatter.step({
-  "line": 27,
+  "line": 31,
   "name": "I scrolldown until I see \"Menu List\" table",
   "keyword": "When "
 });
 formatter.step({
-  "line": 28,
-  "name": "I click on the menu item \"Others\" node",
+  "line": 32,
+  "name": "I click on the menu item \"Input Forms\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "I scroll till I see the second input menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "I enter the first number 25 in the first box",
   "matchedColumns": [
     0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "I enter the second number 25 in the seond box",
+  "matchedColumns": [
+    1
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 29,
-  "name": "I should see the child-elements \"Drag and Drop,Dynamic Data Loading,Charts Demo\" under that",
+  "line": 37,
+  "name": "I click on the Get total button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "I should get the total result as 50",
   "matchedColumns": [
-    1
+    2
   ],
   "keyword": "Then "
 });
@@ -1141,7 +711,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
 });
 formatter.result({
-  "duration": 7674189,
+  "duration": 8697220,
   "status": "passed"
 });
 formatter.match({
@@ -1154,7 +724,7 @@ formatter.match({
   "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
 });
 formatter.result({
-  "duration": 40423312,
+  "duration": 62138727,
   "status": "passed"
 });
 formatter.match({
@@ -1167,37 +737,539 @@ formatter.match({
   "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
 });
 formatter.result({
-  "duration": 528143058,
+  "duration": 529344998,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Others",
+      "val": "Input Forms",
       "offset": 26
     }
   ],
   "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
 });
 formatter.result({
-  "duration": 65252912,
+  "duration": 81228685,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Drag and Drop,Dynamic Data Loading,Charts Demo",
+      "val": "Simple Form Demo",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 584485415,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_scroll_till_I_see_the_second_input_menu()"
+});
+formatter.result({
+  "duration": 549927322,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "25",
+      "offset": 25
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_first_number_in_the_first_box(int)"
+});
+formatter.result({
+  "duration": 1182276055,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "25",
+      "offset": 26
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_second_number_in_the_seond_box(int)"
+});
+formatter.result({
+  "duration": 1177370353,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_click_on_the_Get_total_button()"
+});
+formatter.result({
+  "duration": 75566134,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "50",
       "offset": 33
     }
   ],
-  "location": "HomePageStepDefn.i_should_see_the_child_elements_under_that(String)"
+  "location": "SimpleInputFormStepDefn.i_should_get_the_total_result_as(int)"
 });
 formatter.result({
-  "duration": 1117533205,
+  "duration": 37516157,
   "status": "passed"
 });
 formatter.after({
-  "duration": 868534176,
+  "duration": 985268350,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 21333,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 9626318183,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 178719203,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 45,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
+  "description": "",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;5",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@SimpleForm"
+    },
+    {
+      "line": 27,
+      "name": "@2"
+    },
+    {
+      "line": 2,
+      "name": "@UI"
+    },
+    {
+      "line": 2,
+      "name": "@Regression"
+    },
+    {
+      "line": 27,
+      "name": "@Integration"
+    },
+    {
+      "line": 27,
+      "name": "@Karthic"
+    }
+  ]
+});
+formatter.step({
+  "line": 29,
+  "name": "I am on the home page of this website",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "I scrolldown until I see \"Menu List\" table",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "I click on the menu item \"Input Forms\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "I scroll till I see the second input menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "I enter the first number 100 in the first box",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "I enter the second number 100 in the seond box",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "I click on the Get total button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "I should get the total result as 2000",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
+});
+formatter.result({
+  "duration": 9642676,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Selenium Easy",
+      "offset": 19
+    }
+  ],
+  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
+});
+formatter.result({
+  "duration": 49297017,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Menu List",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
+});
+formatter.result({
+  "duration": 522810689,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Input Forms",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 67744066,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Simple Form Demo",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 478289919,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_scroll_till_I_see_the_second_input_menu()"
+});
+formatter.result({
+  "duration": 532993487,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "100",
+      "offset": 25
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_first_number_in_the_first_box(int)"
+});
+formatter.result({
+  "duration": 1154526696,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "100",
+      "offset": 26
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_second_number_in_the_seond_box(int)"
+});
+formatter.result({
+  "duration": 1132493220,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_click_on_the_Get_total_button()"
+});
+formatter.result({
+  "duration": 59709634,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2000",
+      "offset": 33
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_should_get_the_total_result_as(int)"
+});
+formatter.result({
+  "duration": 33038093,
+  "error_message": "java.lang.AssertionError: expected [2000] but found [200]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:135)\r\n\tat org.testng.Assert.assertEquals(Assert.java:116)\r\n\tat org.testng.Assert.assertEquals(Assert.java:190)\r\n\tat org.testng.Assert.assertEquals(Assert.java:200)\r\n\tat stepdefs.SimpleInputFormStepDefn.i_should_get_the_total_result_as(SimpleInputFormStepDefn.java:75)\r\n\tat ✽.Then I should get the total result as 2000(features/SimpleInputForm.feature:38)\r\n",
+  "status": "failed"
+});
+formatter.embedding("image/png", "embedded2.png");
+formatter.after({
+  "duration": 2573532192,
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded3.png");
+formatter.after({
+  "duration": 5751564850,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 16148674568,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 335150870,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 46,
+  "name": "Verify that we are able to add two numbers typed in the boxes",
+  "description": "",
+  "id": "simpleinputform-validation-feature;verify-that-we-are-able-to-add-two-numbers-typed-in-the-boxes;;6",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 2,
+      "name": "@SimpleForm"
+    },
+    {
+      "line": 27,
+      "name": "@2"
+    },
+    {
+      "line": 2,
+      "name": "@UI"
+    },
+    {
+      "line": 2,
+      "name": "@Regression"
+    },
+    {
+      "line": 27,
+      "name": "@Integration"
+    },
+    {
+      "line": 27,
+      "name": "@Karthic"
+    }
+  ]
+});
+formatter.step({
+  "line": 29,
+  "name": "I am on the home page of this website",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 30,
+  "name": "I wait till I see \"Selenium Easy\" logo text on home page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 31,
+  "name": "I scrolldown until I see \"Menu List\" table",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "I click on the menu item \"Input Forms\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 33,
+  "name": "I click on the menu item \"Simple Form Demo\" node",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 34,
+  "name": "I scroll till I see the second input menu",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 35,
+  "name": "I enter the first number 500 in the first box",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "I enter the second number 1500 in the seond box",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 37,
+  "name": "I click on the Get total button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "I should get the total result as 2000",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "HomePageStepDefn.i_am_on_the_home_page_of_this_website()"
+});
+formatter.result({
+  "duration": 8021826,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Selenium Easy",
+      "offset": 19
+    }
+  ],
+  "location": "HomePageStepDefn.i_wait_till_I_see_logo_text_on_home_page(String)"
+});
+formatter.result({
+  "duration": 49398836,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Menu List",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_scrolldown_until_I_see_table(String)"
+});
+formatter.result({
+  "duration": 524478569,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Input Forms",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 79600562,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Simple Form Demo",
+      "offset": 26
+    }
+  ],
+  "location": "HomePageStepDefn.i_click_on_the_menu_item_node(String)"
+});
+formatter.result({
+  "duration": 677374233,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_scroll_till_I_see_the_second_input_menu()"
+});
+formatter.result({
+  "duration": 536316157,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "500",
+      "offset": 25
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_first_number_in_the_first_box(int)"
+});
+formatter.result({
+  "duration": 1167384405,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1500",
+      "offset": 26
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_enter_the_second_number_in_the_seond_box(int)"
+});
+formatter.result({
+  "duration": 1132310916,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SimpleInputFormStepDefn.i_click_on_the_Get_total_button()"
+});
+formatter.result({
+  "duration": 50997868,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2000",
+      "offset": 33
+    }
+  ],
+  "location": "SimpleInputFormStepDefn.i_should_get_the_total_result_as(int)"
+});
+formatter.result({
+  "duration": 26928995,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 889151408,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 28606,
   "status": "passed"
 });
 });

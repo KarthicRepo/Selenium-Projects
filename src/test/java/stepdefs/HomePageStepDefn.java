@@ -1,9 +1,13 @@
 package stepdefs;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.Augmenter;
 import org.testng.Assert;
 
 import actions.BaseTest;
@@ -15,11 +19,15 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import utils.ExtentManager;
+import utils.ExtentTestManager;
+import utils.ScenarioCacheManager;
 import utils.SeleniumDriver;
+import utils.Utils;
 
 public class HomePageStepDefn{
 
-	public static WebDriver driver;
+	ScenarioCacheManager scenarioCacheManager= BaseTest.getScenarioCache();
 	HomePageActions homePgActions;
 	HomePageValidatorImpl homePgValidator;
 	
@@ -27,8 +35,10 @@ public class HomePageStepDefn{
 
 	@Before
 	public void setUp(Scenario scenario) {
-		driver=BaseTest.getInstance();
-		homePgActions= new HomePageActions(driver); ;
+		
+		scenarioCacheManager.store("scenario", scenario);
+		BaseTest.setUpDriver();
+		homePgActions= new HomePageActions(); ;
 		homePgValidator = new HomePageValidatorImpl(homePgActions);
 		homePgActions.gotoHomePage();
 		tempMenuItem = null;
@@ -83,8 +93,12 @@ public class HomePageStepDefn{
 	}
 	
 	@After
-	public void tearDown() {
-	
+	public void tearDown(Scenario scenario) {
+		if (scenario.isFailed()) {
+            byte[] screenshotBytes = ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.embed(screenshotBytes, "image/png");
+            Utils.introduceSleepInMilliSecs(1000);
+        }
 	homePgActions.closeDriver();
 	}
 }

@@ -22,6 +22,14 @@ public class Utils {
 		introduceSleepInMilliSecs(500);
 	}
 	
+	public static void enterTextAfterWaitingForElement(final WebDriver driver, final WebElement element, final String textToEnter)
+    {
+        Utils.pauseWebDriverUntilElementBecomeVisible(driver, element, 10000);
+        element.clear();
+        element.sendKeys(textToEnter);
+        Utils.introduceSleepInMilliSecs(1000);
+    }
+	
 	public static void introduceSleepInMilliSecs(int inMilliSec) {
 		 try
 	        {

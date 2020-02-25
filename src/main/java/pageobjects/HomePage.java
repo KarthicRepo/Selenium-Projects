@@ -8,11 +8,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import actions.BaseTest;
+
 public class HomePage {
 	
 	WebDriver driver;
-	public HomePage(WebDriver driver) {
-		this.driver=driver;
+	public HomePage() {
+		driver=BaseTest.getDriver();
 		PageFactory.initElements(driver, this);
 	}
 	

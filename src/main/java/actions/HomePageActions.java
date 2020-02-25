@@ -11,20 +11,18 @@ import utils.Utils;
 public class HomePageActions extends HomePage{
 
 	
-	WebDriver driver;
+	WebDriver driver=BaseTest.getDriver();
 	private String pageUri = "https://www.seleniumeasy.com/test/";
 	private String pageTitle = "Selenium Easy";
 
-	public HomePageActions(WebDriver driver) {
-		super(driver);
-		this.driver=driver;
+	public HomePageActions() {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,
 		// 10000);
 
 	}
-
+	
 	public boolean isWebElementVisible(WebElement webElement) {
 		return Utils.pauseWebDriverUntilElementBecomeVisible(driver, webElement, 10000) != null;
 
@@ -55,10 +53,7 @@ public class HomePageActions extends HomePage{
 	}
 
 	public void closeDriver() {
-		if (driver != null) {
-			driver.quit();
-		}
-		driver=null;
+		BaseTest.destroyDriver();
 	}
 
 }
