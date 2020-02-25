@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="223998" started-at="2020-02-25T03:55:45Z" finished-at="2020-02-25T03:59:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="223998" started-at="2020-02-25T03:55:45Z" finished-at="2020-02-25T03:59:29Z">
+      <class name="runners.RunCuke">
+        <test-method status="PASS" signature="runTest()[pri:0, instance:runners.RunCuke@470f1802]" name="runTest" duration-ms="223975" started-at="2020-02-25T09:25:46Z" finished-at="2020-02-25T09:29:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+      </class> <!-- runners.RunCuke -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
