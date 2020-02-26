@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.testng.Assert;
 
-import actions.BaseTest;
+import actions.DriverManager;
 import actions.HomePageActions;
 import cucumber.api.DataTable;
 import cucumber.api.Scenario;
@@ -27,23 +27,12 @@ import utils.Utils;
 
 public class HomePageStepDefn{
 
-	ScenarioCacheManager scenarioCacheManager= BaseTest.getScenarioCache();
-	HomePageActions homePgActions;
-	HomePageValidatorImpl homePgValidator;
+	ScenarioCacheManager scenarioCacheManager= DriverManager.getScenarioCache();
+	HomePageActions homePgActions= new HomePageActions();
+	HomePageValidatorImpl homePgValidator = new HomePageValidatorImpl(homePgActions);
+	String tempMenuItem  = null;
+
 	
-	String tempMenuItem;
-
-	@Before
-	public void setUp(Scenario scenario) {
-		
-		scenarioCacheManager.store("scenario", scenario);
-		BaseTest.setUpDriver();
-		homePgActions= new HomePageActions(); ;
-		homePgValidator = new HomePageValidatorImpl(homePgActions);
-		homePgActions.gotoHomePage();
-		tempMenuItem = null;
-	}
-
 	@Given("^I am on the home page of this website$")
 	public void i_am_on_the_home_page_of_this_website() throws Throwable {
 		boolean flag = homePgActions.getCurrentPageTitle().contains(homePgActions.getExpectedPageTitle());
@@ -92,13 +81,4 @@ public class HomePageStepDefn{
 		Assert.assertTrue(flag,"Some sub-menu items did not match.. please check test logs");
 	}
 	
-	@After
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-            byte[] screenshotBytes = ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshotBytes, "image/png");
-            Utils.introduceSleepInMilliSecs(1000);
-        }
-	homePgActions.closeDriver();
-	}
 }

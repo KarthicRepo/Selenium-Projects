@@ -8,28 +8,15 @@ import org.openqa.selenium.WebElement;
 import pageobjects.HomePage;
 import utils.Utils;
 
-public class HomePageActions extends HomePage{
+public class HomePageActions extends HomePage {
 
+	WebDriver driver = DriverManager.getDriver();
 	
-	WebDriver driver=BaseTest.getDriver();
-	private String pageUri = "https://www.seleniumeasy.com/test/";
 	private String pageTitle = "Selenium Easy";
 
-	public HomePageActions() {
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		// AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,
-		// 10000);
-
-	}
-	
 	public boolean isWebElementVisible(WebElement webElement) {
 		return Utils.pauseWebDriverUntilElementBecomeVisible(driver, webElement, 10000) != null;
 
-	}
-
-	public void gotoHomePage() {
-		driver.get(pageUri);
 	}
 
 	public String getCurrentPageTitle() {
@@ -41,7 +28,7 @@ public class HomePageActions extends HomePage{
 	}
 
 	public void clickOnWebElement(WebElement element) {
-		element.click();
+		Utils.pauseWebDriverUntilElementBecomeVisible(driver, element, 50000).click();
 	}
 
 	public void scrollToWebElement(WebElement element) {
@@ -49,11 +36,8 @@ public class HomePageActions extends HomePage{
 	}
 
 	public void clickOnWebElementByText(WebElement webElement) {
-		webElement.click();
+		Utils.pauseWebDriverUntilElementBecomeVisible(driver, webElement, 50000).click();
 	}
 
-	public void closeDriver() {
-		BaseTest.destroyDriver();
-	}
 
 }

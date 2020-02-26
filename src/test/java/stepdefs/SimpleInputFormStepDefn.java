@@ -1,35 +1,18 @@
 package stepdefs;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import actions.BaseTest;
 import actions.SimpleInputFormActions;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageobjects.SimpleInputFormPage;
-import utils.ExtentManager;
-import utils.Utils;
 
 public class SimpleInputFormStepDefn {
+	
+	SimpleInputFormPage simpleInputFormPage = new SimpleInputFormPage();
+	SimpleInputFormActions simpleInputFormActions = new SimpleInputFormActions(simpleInputFormPage);
 
-	public static WebDriver driver;
-	SimpleInputFormActions simpleInputFormActions;
-	SimpleInputFormPage simpleInputFormPage;
-
-	@Before
-	public void setUp(Scenario scenario) {
-		BaseTest.setUpDriver();
-		simpleInputFormPage = new SimpleInputFormPage();
-		simpleInputFormActions = new SimpleInputFormActions(simpleInputFormPage);
-		simpleInputFormActions.gotoHomePage();
-	}
-
+	
 	@When("^I enter the message \"([^\"]*)\" into text input box$")
 	public void i_enter_the_message_into_text_input_box(String message) throws Throwable {
 		simpleInputFormActions.typeMessage(message);
@@ -76,14 +59,4 @@ public class SimpleInputFormStepDefn {
 
 	}
 	
-	@After
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-            byte[] screenshotBytes = ((TakesScreenshot) BaseTest.getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshotBytes, "image/png");
-            Utils.introduceSleepInMilliSecs(1000);
-	  }        
-		simpleInputFormActions.closeDriver();
-	}
-
 }

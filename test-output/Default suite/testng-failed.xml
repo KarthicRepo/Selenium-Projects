@@ -6,13 +6,4 @@
       <class name="runners.SimpleInputFormRunner"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="runners.SimpleInputFormRunner">
-        <methods>
-          <include name="simpleInputFormTest"/>
-        </methods>
-      </class> <!-- runners.SimpleInputFormRunner -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

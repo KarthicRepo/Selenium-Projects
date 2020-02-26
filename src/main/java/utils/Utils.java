@@ -30,6 +30,24 @@ public class Utils {
         Utils.introduceSleepInMilliSecs(1000);
     }
 	
+	public static String getTextAfterWaitingForElement(final WebDriver driver, final WebElement element, int waitTime)
+    {
+        Utils.pauseWebDriverUntilElementBecomeVisible(driver, element, waitTime);
+        return element.getText().trim();
+    }
+	
+	public static String getValueAttributeAfterWaitingForElement(final WebDriver driver, final WebElement element, int waitTime)
+    {
+        Utils.pauseWebDriverUntilElementBecomeVisible(driver, element, waitTime);
+        return element.getAttribute("value").toString().trim();
+    }
+	
+	public static void clickAfterWaitingForElement(final WebDriver driver, final WebElement element, int waitTime)
+    {
+        Utils.pauseWebDriverUntilElementBecomeVisible(driver, element, waitTime);
+        element.click();
+    }
+	
 	public static void introduceSleepInMilliSecs(int inMilliSec) {
 		 try
 	        {

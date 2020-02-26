@@ -14,7 +14,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
-import actions.BaseTest;
+import actions.DriverManager;
 import cucumber.api.Scenario;
 import utils.ExtentManager;
 import utils.ScenarioCacheManager;
@@ -23,7 +23,7 @@ public class TestListeners implements ITestListener {
 
 	public static ThreadLocal<ExtentTest> extentTestThreads = new ThreadLocal<ExtentTest>();
 	ExtentReports extent = ExtentManager.getReporter();
-	ScenarioCacheManager scenarioCacheManager = BaseTest.getScenarioCache();
+	ScenarioCacheManager scenarioCacheManager = DriverManager.getScenarioCache();
 	//Scenario currentScenario = (Scenario) scenarioCacheManager.retrieve("scenario");
 
 	@Override

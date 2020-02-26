@@ -8,7 +8,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 //@RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, features = "src/test/resources", glue = "stepdefs",
 format = {"pretty", "html:target/cucumberreports"},monochrome=true,
-tags= {"@Karthic"})
+tags= {"@DatePicker"})
 public class SimpleInputFormRunner {
 
 	@Test

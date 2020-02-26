@@ -5,15 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import actions.BaseTest;
+import actions.DriverManager;
 import pageobjects.HomePage;
 
 public class SimpleInputFormPage extends HomePage{
 
 	
-	WebDriver driver;
+	WebDriver driver=DriverManager.getDriver();
 	public SimpleInputFormPage() {
-		driver=BaseTest.getDriver();
+		
 		PageFactory.initElements(driver, this);
 	}
 	

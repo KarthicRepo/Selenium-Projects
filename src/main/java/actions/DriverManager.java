@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -15,19 +16,27 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import com.aventstack.extentreports.ExtentReports;
 
 import bsh.Capabilities;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ScenarioCacheManager;
 
-public class BaseTest {
+public class DriverManager {
 
 	private static WebDriver driver;
+	
+	
 	private static ThreadLocal<WebDriver> driverThreads = new ThreadLocal<>();
 	private static  ThreadLocal<ScenarioCacheManager> cacheManagerThreads= new ThreadLocal<>();
+	static int i=0;
+	
 
 	public static void setUpDriver() {
 		
 		if(driverThreads.get() == null) {
+			
+			System.out.println("Initializing webdrier instance:"+ ++i);
 			String dirPath = System.getProperty("user.dir") + "//src//test//resources//executables//chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", dirPath);
 			
@@ -42,17 +51,16 @@ public class BaseTest {
 			options.setCapability(CapabilityType.PLATFORM,Platform.ANY);
 			
 			driver = new ChromeDriver(options.merge(cap));
-			driverThreads.set(driver);
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			setDriver(driver);
 			
 		}
 
 	}
+	private DriverManager() {}
 	
-	private BaseTest() {
-		
-	}
-	
-	public static void setDriver(WebDriver driver) {
+	private static void setDriver(WebDriver driver) {
 		driverThreads.set(driver);
 	}
 	
@@ -84,5 +92,7 @@ public class BaseTest {
 		}
 		driverThreads.set(null);
 	}
+	
+	
 		
 }
