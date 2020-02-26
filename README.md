@@ -1,6 +1,6 @@
 # Selenium sample programs
 
-In this project I have automated couple of scenarios on the test website "Seleniumlearning.com"
+In this project I have automated couple of scenarios on the test website "https://www.seleniumeasy.com/test/"
 Below are the scenarios automated.
 
 1) Home Page validation:
