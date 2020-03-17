@@ -11,12 +11,12 @@ Below are the scenarios automated.
 2) Simple input forms:
    Will navigate to this page via multiple tree-node options.
    Validate simple input text and test display text scenarios.
-   Validate a simplet online calculator function adding two digit numbers.
+   Validate a simple online calculator function adding two digit numbers.
    
 3) Bootstrap Date-picker:
    Will navigate to this page via multiple tree-node options.
-   Will select the give date in text format.
-   Will validate the selected date against a different date format.
+   Will select the given date in text format.
+   Will validate the selected date against the expected date format.
    
    
 Test Design:
